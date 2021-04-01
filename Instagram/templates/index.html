@@ -1,22 +1,23 @@
 {%extends 'base.html'%}
 {%block content%}
-<div class="container" style="font-family: 'Jost', sans-serif;">
+<div class="container" style="font-family: 'Sarabun',;">
      <hr>
     <div class="row">
-        <div class="col-11">
+        <div class="col-10">
             <div class="row">
                 {%for post in posts%}
-                <div class="mx-auto" style="border: light 2px;">
+                <div class=" col-md-8 mx-auto" style="border: light 2px; color: black">
                     <div class="card m-1">
-                        <img src="{{post.image.url}}" class="img-fluid" height="50px">
+                        <img src="{{post.image.url}}" class="img-fluid" height="35px">
                         <a href="{%url 'comment' post.id %}" class="pl-3">
                            <p>{{post.comments.Count}}</p>
-                            View all comments
+                            See comments
                     
                         </a>
                         <div class="row pl-4">
-                            <a href="" ><i class="fas fa-heart h2 fa-fw pr-3"></i>
-                            <a href="{% url 'comment' post.id %}"><i class="fas fa-comment h2 fa-fw pr-3"></i></a>
+                            <button type="button">Like</button>
+                            <a href="" ></i>
+                            <button type="button">Comment</button><a href="{% url 'comment' post.id %}"></a></button>
                             <!-- <p>likes: {{total_likes}}</p> -->
                         </div>
                         
