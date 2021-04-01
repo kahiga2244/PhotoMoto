@@ -1,18 +1,21 @@
 {% extends 'base.html' %}
 {%block content%}
-<div class="col-sm-6 m-auto " style="font-family: 'Jost', sans-serif;">
+<div class="col-sm-6 margin-left " style="font-family: 'Jost', sans-serif;">
     <div class=" content-section container" style="padding-top: 100px;">
     <div class="media">
         <div class="col-sm-4">
-            <div style="width: 150px; height:150px; overflow:hidden; border-radius:50%" class="img-wrapper">
-                <img width="120%" height="120%" src="{{user.profile.profilephoto.url }}" alt="profile">
+            <div style="width: 100px; height:150px; overflow:hidden; border-radius:50%" class="img-wrapper">
+                <img width="100%" height="100%" src="{{user.profile.profilephoto.url }}" alt="profile">
             </div>
         </div>
         <div class="media-body">
-            <h2 class="account-heading">{{user.username}}</h2>
-            <p class="text-secondary">{{user.email}}</p>
+            <h2 class="account-heading">@{{user.username}}</h2>
             <p>{{user.profile.Bio}}</p>
             <div class="row">
+                <div class="col-sm">
+                    <p>Posts</p>
+                    <p>0</p>
+                </div>
                 <div class="col-sm">
                     <p>Followers</p>
                     <p>7</p>
@@ -21,11 +24,12 @@
                     <p>Following</p>
                     <p>8</p>
                 </div>
+
             </div>
             <hr>
 
             <a href="{%url 'update_profile'%}">
-                <button class="btn btn-primary">Edit Profile</button>
+                <button class="btn btn-primary">Change Profile</button>
             </a>
 
         </div>
