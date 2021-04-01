@@ -2,8 +2,8 @@
 {%load crispy_forms_tags%}
 {%block content%}
 <div class="container"style="font-family: 'Jost', sans-serif;">
-    <div class="row mt-5" style="padding-top: 80px;">
-        <div class="col-sm-6 m-auto card">
+    <div class="row " style="padding-top: 80px;">
+        <div class="col-sm-6 margin-left ">
             <br>
             <div>
                 <form method="POST" enctype="multipart/form-data">
@@ -14,11 +14,15 @@
                         {{ user_form|crispy}}
                     </fieldset>
                     <div class="form-group">
-                        <button class="btn btn-outline-info" type="submit">update</button>
+                        <button class="btn btn-primary" type="submit">ADD</button>
                     </div>
                 </form>
             </div>
         </div>
+            <div class="col-md-6 margin-right">
+                <img src="/media/images/n.jpg"  width="200" height="400" class="img-fluid mt-5">
+            </div> 
+        
     </div>
 </div>
 {%endblock%}
