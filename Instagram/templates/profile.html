@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 {%block content%}
+<div class="row"></div>
+    <h3>Users</h3>
+        <a>
+                {%for prof in profile%} 
+                <div class="col-sm"> 
+                <img src="{{prof.user.profile.profilephoto.url}}" alt=""
+                        class="rounded-circle border " height="50px" width="50px">
+                        <a href="{%url "prof" %}" class="h3">{{prof.user}}</a>
+                {%endfor%}
+            </div>
+        </a>
+</div>
 <div class="col-sm-6 margin-left " style="font-family: 'Jost', sans-serif;">
     <div class=" content-section container" style="padding-top: 100px;">
     <div class="media">
@@ -31,7 +43,7 @@
             <a href="{%url 'update_profile'%}">
                 <button class="btn btn-primary">Change Profile</button>
             </a>
-<h1>nc bcjhdsVCJHSBxa</h1>
+
         </div>
     </div>
 </div>
