@@ -6,8 +6,8 @@
         <div class="col-11">
             <div class="row">
                 {%for post in posts%}
-                <div class="col-md-8" style="border: light 2px;">
-                    <div class="card m-3">
+                <div class="mx-auto" style="border: light 2px;">
+                    <div class="card m-1">
                         <img src="{{post.image.url}}" class="img-fluid" height="50px">
                         <a href="{%url 'comment' post.id %}" class="pl-3">
                            <p>{{post.comments.Count}}</p>
