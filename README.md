@@ -8,7 +8,7 @@ This web app app allows you to
 log in, log out, comment,like, add a photo,sign out.
 
 ## Live Link (feel free to experiment all features)
-[View Site](https://photomoto.herokuapp.com/)
+[View Site](https://igclone254.herokuapp.com//)
 
 
 ## Setup Instructions:
